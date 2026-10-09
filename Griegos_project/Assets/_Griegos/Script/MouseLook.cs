@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class MouseLook : MonoBehaviour
@@ -21,10 +22,6 @@ public class MouseLook : MonoBehaviour
 
     private void Start()
     {
-        // Lock the mouse to the center of the screen.
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-
         // Get the camera's current vertical rotation.
         verticalRotation = cameraTransform.localEulerAngles.x;
 
@@ -40,7 +37,7 @@ public class MouseLook : MonoBehaviour
 
     private void Update()
     {
-        // Only rotate while right click is being held
+        // Only rotate while right click is being held.
         if (!Input.GetMouseButton(1))
             return;
 
@@ -49,28 +46,17 @@ public class MouseLook : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y");
 
         // HORIZONTAL ROTATION
-
-        // Rotate the player left/right.
         float horizontalRotation = mouseX * sensitivity * Time.deltaTime;
-
-        transform.Rotate(Vector3.up,horizontalRotation);
+        transform.Rotate(Vector3.up, horizontalRotation);
 
         // VERTICAL ROTATION
-
-        // Mouse Y controls looking up/down.
         verticalRotation -= mouseY * sensitivity * Time.deltaTime;
 
         // Prevent the player from looking too far up/down.
         verticalRotation = Mathf.Clamp(verticalRotation, -maxVerticalAngle, maxVerticalAngle);
 
         // Apply vertical rotation only to the camera.
-        cameraTransform.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
-    }
-
-    private void OnDisable()
-    {
-        // Unlock the cursor when the script is disabled.
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        cameraTransform.localRotation =
+            Quaternion.Euler(verticalRotation, 0f, 0f);
     }
 }
