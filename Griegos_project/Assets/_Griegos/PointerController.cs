@@ -38,29 +38,25 @@ public class PointerController : MonoBehaviour
         // Check for input
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            CheckSuccess();
-            CheckMediocre();
+            CheckResult();
         }
     }
 
-    void CheckSuccess()
+    void CheckResult()
     {
-        // Check if the pointer is within the safe zone
+        // Check the green safe zone first
         if (RectTransformUtility.RectangleContainsScreenPoint(safeZone, pointerTransform.position, null))
         {
             Debug.Log("Success!");
         }
+        // Only check mediocre if it wasn't a success
+        else if (RectTransformUtility.RectangleContainsScreenPoint(midZone, pointerTransform.position, null))
+        {
+            Debug.Log("Mediocre!");
+        }
         else
         {
             Debug.Log("Fail!");
-        }
-    }
-     void CheckMediocre()
-    {
-        // Check if the pointer is within the Mid zone
-        if (RectTransformUtility.RectangleContainsScreenPoint(midZone, pointerTransform.position, null))
-        {
-            Debug.Log("Mediocre!");
         }
     }
 }
