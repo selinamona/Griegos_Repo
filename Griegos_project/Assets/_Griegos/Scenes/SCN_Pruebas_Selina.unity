@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 40114}
   - component: {fileID: 40116}
   - component: {fileID: 40115}
+  - component: {fileID: 40117}
   m_Layer: 5
   m_Name: Drinks
   m_TagString: Untagged
@@ -195,6 +196,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 40113}
   m_CullTransparentMesh: 1
+--- !u!114 &40117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1683406620}
+          m_TargetAssemblyTypeName: TabsController, Assembly-CSharp
+          m_MethodName: ActivateTabe
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &246731718
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,7 +632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.42663375, g: 0.414717, b: 0.5924529, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -946,6 +976,7 @@ GameObject:
   - component: {fileID: 1035493239}
   - component: {fileID: 1035493241}
   - component: {fileID: 1035493240}
+  - component: {fileID: 1035493242}
   m_Layer: 5
   m_Name: Recipes
   m_TagString: Untagged
@@ -1011,6 +1042,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1035493238}
   m_CullTransparentMesh: 1
+--- !u!114 &1035493242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035493238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1683406620}
+          m_TargetAssemblyTypeName: TabsController, Assembly-CSharp
+          m_MethodName: ActivateTabe
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1614238262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,7 +1200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4566037, g: 0.4355261, b: 0.25414732, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1344,6 +1404,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1683406618}
   - component: {fileID: 1683406619}
+  - component: {fileID: 1683406620}
   m_Layer: 5
   m_Name: Tabs
   m_TagString: Untagged
@@ -1396,6 +1457,24 @@ MonoBehaviour:
   m_Spacing: {x: 50, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &1683406620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683406617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb6bafffa38e9f45995ce3bedd7277a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TabsController
+  tabImages:
+  - {fileID: 1035493240}
+  - {fileID: 40115}
+  pages:
+  - {fileID: 548492633}
+  - {fileID: 1619049053}
 --- !u!1 &1706528776
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,7 +1645,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb6bafffa38e9f45995ce3bedd7277a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TabsController
-  menuCanvas: {fileID: 645139811}
+  tabImages: []
+  pages: []
 --- !u!114 &1892049745
 MonoBehaviour:
   m_ObjectHideFlags: 0
