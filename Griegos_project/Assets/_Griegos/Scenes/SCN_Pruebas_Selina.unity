@@ -700,7 +700,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MouseLook
   cameraTransform: {fileID: 330585546}
   sensitivity: 200
-  maxVerticalAngle: 50
+  maxVerticalAngle: 25
   rotationSpeed: 100
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
