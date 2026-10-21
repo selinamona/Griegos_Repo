@@ -1404,8 +1404,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cf44ca3bf8a3b04083944cf9d2c3178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnableDisable
-  pageToOpen: {fileID: 0}
-  pagesToClose: []
+  pageToOpen: {fileID: 273316114}
+  pagesToClose:
+  - {fileID: 1379319039}
+  - {fileID: 780948333}
 --- !u!1 &1205384638
 GameObject:
   m_ObjectHideFlags: 0
@@ -2584,8 +2586,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cf44ca3bf8a3b04083944cf9d2c3178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnableDisable
-  pageToOpen: {fileID: 0}
-  pagesToClose: []
+  pageToOpen: {fileID: 780948333}
+  pagesToClose:
+  - {fileID: 1379319039}
+  - {fileID: 273316114}
 --- !u!1 &1706528776
 GameObject:
   m_ObjectHideFlags: 0

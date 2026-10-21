@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RecipeButton : MonoBehaviour
+public class EnableDisable : MonoBehaviour
 {
     public GameObject pageToOpen;
     public GameObject[] pagesToClose;
