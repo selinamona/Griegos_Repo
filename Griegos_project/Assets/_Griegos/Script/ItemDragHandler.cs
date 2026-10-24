@@ -8,6 +8,9 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     Transform originalParent;
     CanvasGroup canvasGroup;
 
+    // The original 3D item this inventory item belongs to
+    public WorldItem worldItem;
+
     void Start()
     {
         canvasGroup = GetComponent<CanvasGroup>();
@@ -15,18 +18,18 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        originalParent = transform.parent; // Save original parent
+        originalParent = transform.parent;
 
         // Keep the item inside the Canvas while dragging
         transform.SetParent(GetComponentInParent<Canvas>().transform, true);
 
         canvasGroup.blocksRaycasts = false;
-        canvasGroup.alpha = 0.6f; // Semi-transparent during drag
+        canvasGroup.alpha = 0.6f;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        transform.position = eventData.position; // Follow the mouse
+        transform.position = eventData.position;
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -42,10 +45,9 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
         if (dropSlot != null)
         {
+            // Slot already contains an item
             if (dropSlot.currentItem != null)
             {
-                // Slot has an item - swap items
-
                 GameObject otherItem = dropSlot.currentItem;
 
                 // Move the other item to the original slot
@@ -65,15 +67,25 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             transform.SetParent(dropSlot.transform);
 
             dropSlot.currentItem = gameObject;
+
+            // Center item inside the slot
+            GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
         }
         else
         {
-            // No slot under drop point
-            // Return the item to its original slot
-            transform.SetParent(originalParent);
-        }
+            // The item was dragged outside the inventory
 
-        // Center the item inside its slot
-        GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+            // Empty the original slot
+            originalSlot.currentItem = null;
+
+            // Bring the original 3D item back
+            if (worldItem != null)
+            {
+                worldItem.gameObject.SetActive(true);
+            }
+
+            // Remove the 2D inventory item
+            Destroy(gameObject);
+        }
     }
 }
