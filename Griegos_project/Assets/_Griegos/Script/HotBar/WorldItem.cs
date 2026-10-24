@@ -4,6 +4,6 @@ public class WorldItem : MonoBehaviour
 {
     public string itemName;
 
-    // The 2D image that will appear in the inventory
-    public Sprite inventoryIcon;
+    // The 2D inventory prefab
+    public GameObject inventoryPrefab;
 }

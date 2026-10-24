@@ -12,15 +12,7 @@ public class InvetoryController : MonoBehaviour
     {
         for (int i = 0; i < slotCount; i++)
         {
-            Slot slot = Instantiate(slotPrefab, inventoryPanel.transform).GetComponent<Slot>();
-
-            if (i < itemPrefabs.Length)
-            {
-                GameObject item = Instantiate(itemPrefabs[i], slot.transform);
-
-                item.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
-                slot.currentItem = item;
-            }
+            Instantiate(slotPrefab, inventoryPanel.transform);
         }
     }
 
@@ -41,40 +33,26 @@ public class InvetoryController : MonoBehaviour
         Debug.Log("Inventory is full!");
     }
 
-    void AddItemToSlot(WorldItem worldItem, Slot slot)
+void AddItemToSlot(WorldItem worldItem, Slot slot)
     {
-        // Create the 2D inventory item
-        GameObject item = new GameObject(worldItem.itemName);
+        // Create the 2D inventory item from the prefab
+        GameObject item = Instantiate(worldItem.inventoryPrefab, slot.transform);
 
-        // Put it inside the slot
-        item.transform.SetParent(slot.transform, false);
+        // Make sure it is positioned correctly
+        RectTransform rect = item.GetComponent<RectTransform>();
+        rect.anchoredPosition = Vector2.zero;
 
-        // Add UI Image
-        Image image = item.AddComponent<Image>();
+        // Find the drag handler that already exists on the prefab
+        ItemDragHandler dragHandler = item.GetComponent<ItemDragHandler>();
 
-        // Use the icon from the 3D item
-        image.sprite = worldItem.inventoryIcon;
-        image.preserveAspect = true;
-
-        // Add CanvasGroup for dragging
-        item.AddComponent<CanvasGroup>();
-
-        // Add your existing drag script
-        ItemDragHandler dragHandler = item.AddComponent<ItemDragHandler>();
-
-        // Tell the drag script which 3D item it belongs to
-        dragHandler.worldItem = worldItem;
+        // Tell the drag handler which 3D item this belongs to
+        if (dragHandler != null)
+        {
+            dragHandler.worldItem = worldItem;
+        }
 
         // Tell the slot that it contains this item
         slot.currentItem = item;
-
-        // Make the icon fill the slot
-        RectTransform rect = item.GetComponent<RectTransform>();
-
-        rect.anchorMin = Vector2.zero;
-        rect.anchorMax = Vector2.one;
-        rect.offsetMin = Vector2.zero;
-        rect.offsetMax = Vector2.zero;
 
         // Hide the original 3D item
         worldItem.gameObject.SetActive(false);
