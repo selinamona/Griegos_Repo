@@ -17,7 +17,8 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     {
         originalParent = transform.parent; // Save original parent
 
-        transform.SetParent(transform.root); // Move above other canvas objects
+        // Keep the item inside the Canvas while dragging
+        transform.SetParent(GetComponentInParent<Canvas>().transform, true);
 
         canvasGroup.blocksRaycasts = false;
         canvasGroup.alpha = 0.6f; // Semi-transparent during drag
