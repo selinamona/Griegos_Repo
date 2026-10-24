@@ -34,7 +34,10 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1f;
 
-        Slot dropSlot = eventData.pointerEnter?.GetComponent<Slot>();
+        // Find the slot we're dropping onto
+        Slot dropSlot = eventData.pointerEnter?.GetComponentInParent<Slot>();
+
+        // Find the original slot
         Slot originalSlot = originalParent.GetComponent<Slot>();
 
         if (dropSlot != null)
@@ -42,27 +45,35 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             if (dropSlot.currentItem != null)
             {
                 // Slot has an item - swap items
-                dropSlot.currentItem.transform.SetParent(originalSlot.transform);
 
-                originalSlot.currentItem = dropSlot.currentItem;
+                GameObject otherItem = dropSlot.currentItem;
 
-                dropSlot.currentItem.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+                // Move the other item to the original slot
+                otherItem.transform.SetParent(originalSlot.transform);
+
+                originalSlot.currentItem = otherItem;
+
+                otherItem.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
             }
             else
             {
+                // Original slot is now empty
                 originalSlot.currentItem = null;
             }
 
-            // Move item into drop slot
+            // Move dragged item into the new slot
             transform.SetParent(dropSlot.transform);
+
             dropSlot.currentItem = gameObject;
         }
         else
         {
             // No slot under drop point
+            // Return the item to its original slot
             transform.SetParent(originalParent);
         }
 
+        // Center the item inside its slot
         GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
     }
 }
