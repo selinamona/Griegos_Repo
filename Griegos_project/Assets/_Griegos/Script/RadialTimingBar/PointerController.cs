@@ -17,10 +17,14 @@ public class PointerController : MonoBehaviour
     private RectTransform pointerTransform;
     private Vector3 targetPosition;
 
-    void Start()
+    void Awake()
     {
         pointerTransform = GetComponent<RectTransform>();
-        targetPosition = pointB.position;
+    }
+
+    void Start()
+    {
+        StartQTE();
     }
 
     void Update()
@@ -37,7 +41,6 @@ public class PointerController : MonoBehaviour
         {
             targetPosition = pointB.position;
         }
-
         else if (Vector3.Distance(pointerTransform.position, pointB.position) < 0.1f)
         {
             targetPosition = pointA.position;
@@ -48,6 +51,18 @@ public class PointerController : MonoBehaviour
         {
             CheckResult();
         }
+    }
+
+    // Called when the pot has all the ingredients
+    public void StartQTE()
+    {
+        gameFinished = false;
+
+        // Put the pointer back at the beginning
+        pointerTransform.position = pointA.position;
+
+        // Make it move towards B
+        targetPosition = pointB.position;
     }
 
     void CheckResult()

@@ -34,6 +34,23 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        Ray ray = Camera.main.ScreenPointToRay(eventData.position);
+
+        if (Physics.Raycast(ray, out RaycastHit hit))
+        {
+            CookingPot pot = hit.collider.GetComponentInParent<CookingPot>();
+
+            if (pot != null)
+            {
+                if (worldItem != null)
+                {
+                    pot.AddIngredient(worldItem);
+                    Destroy(gameObject);
+                    return;
+                }
+            }
+        }
+
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1f;
 
