@@ -2,13 +2,18 @@ using UnityEngine;
 
 public class PointerController : MonoBehaviour
 {
-    public Transform pointA; // Reference to the starting point
-    public Transform pointB; // Reference to the ending point
-    public RectTransform safeZone; // Reference to the safe zone RectTransform
-    public RectTransform midZone;  // Reference to the mid zone RectTransform
-    public float moveSpeed = 100f; // Speed of the pointer movement
+    public Transform pointA;
+    public Transform pointB;
+    public RectTransform safeZone;
+    public RectTransform midZone;
+    public float moveSpeed = 100f;
 
-    private float direction = 1f; // 1 for moving towards B, -1 for moving towards A
+    // Reference to the result/retry manager
+    public RetryManager retryManager;
+
+    // Prevents the player from getting multiple results
+    private bool gameFinished = false;
+
     private RectTransform pointerTransform;
     private Vector3 targetPosition;
 
@@ -20,19 +25,22 @@ public class PointerController : MonoBehaviour
 
     void Update()
     {
-        // Move the pointer towards the target position
-        pointerTransform.position = Vector3.MoveTowards(pointerTransform.position, targetPosition, moveSpeed * Time.deltaTime);
+        // Stop the pointer after getting a result
+        if (gameFinished)
+            return;
 
-        // Change direction if the pointer reaches one of the points
+        // Move the pointer towards the target position
+        pointerTransform.position = Vector3.MoveTowards(pointerTransform.position,targetPosition,moveSpeed * Time.deltaTime);
+
+        // Change direction when reaching the points
         if (Vector3.Distance(pointerTransform.position, pointA.position) < 0.1f)
         {
             targetPosition = pointB.position;
-            direction = 1f;
         }
+
         else if (Vector3.Distance(pointerTransform.position, pointB.position) < 0.1f)
         {
             targetPosition = pointA.position;
-            direction = -1f;
         }
 
         // Check for input
@@ -44,19 +52,31 @@ public class PointerController : MonoBehaviour
 
     void CheckResult()
     {
+        // Prevent multiple results
+        gameFinished = true;
+
         // Check the green safe zone first
-        if (RectTransformUtility.RectangleContainsScreenPoint(safeZone, pointerTransform.position, null))
+        if (RectTransformUtility.RectangleContainsScreenPoint(safeZone,pointerTransform.position,null))
         {
             Debug.Log("Success!");
+
+            retryManager.ShowResult("Success");
         }
-        // Only check mediocre if it wasn't a success
-        else if (RectTransformUtility.RectangleContainsScreenPoint(midZone, pointerTransform.position, null))
+
+        // Check mediocre zone
+        else if (RectTransformUtility.RectangleContainsScreenPoint(midZone,pointerTransform.position,null))
         {
             Debug.Log("Mediocre!");
+
+            retryManager.ShowResult("Mediocre");
         }
+
+        // Otherwise it's a fail
         else
         {
             Debug.Log("Fail!");
+
+            retryManager.ShowResult("Fail");
         }
     }
 }
