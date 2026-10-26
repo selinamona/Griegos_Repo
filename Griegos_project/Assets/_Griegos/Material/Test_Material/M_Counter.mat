@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: M_Counter
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_Parent: {fileID: 2100000, guid: 9ea592f47d625324694fb7975600d6ba, type: 2}
+  m_Parent: {fileID: 2100000, guid: 9eec6352bd3c0d94cbef1b9683dd1189, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _DETAIL_MULX2
