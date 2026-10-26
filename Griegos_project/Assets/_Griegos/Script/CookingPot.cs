@@ -5,25 +5,48 @@ public class CookingPot : MonoBehaviour
 {
     public int requiredIngredients = 3;
 
-    // Your radial timing bar UI
+    // Your radial timing UI
     public GameObject radialTimingUI;
 
+    // Ingredients currently accepted by the pot
     private List<WorldItem> ingredients = new List<WorldItem>();
 
-    public void AddIngredient(WorldItem item)
+    public bool AddIngredient(WorldItem item)
     {
         if (item == null)
-            return;
+            return false;
 
-        // Don't add the same ingredient twice
+        // Make sure a recipe has been selected
+        if (RecipeManager.instance == null)
+        {
+            Debug.Log("No RecipeManager found!");
+            return false;
+        }
+
+        // Check if the ingredient belongs to the selected recipe
+        if (!RecipeManager.instance.IsIngredientCorrect(item.itemName))
+        {
+            Debug.Log(item.itemName + " is NOT part of the selected recipe!");
+
+            return false;
+        }
+
+        // Don't allow the same ingredient twice
         if (ingredients.Contains(item))
-            return;
+        {
+            Debug.Log(item.itemName + " is already in the pot!");
 
+            return false;
+        }
+
+        // Accept the ingredient
         ingredients.Add(item);
 
-        Debug.Log("Added " + item.itemName + " to the pot.");
+        Debug.Log(item.itemName + " was accepted!");
 
         CheckRecipe();
+
+        return true;
     }
 
     void CheckRecipe()
@@ -36,8 +59,23 @@ public class CookingPot : MonoBehaviour
 
     void StartRadialQTE()
     {
-        Debug.Log("All 3 ingredients added! Starting radial QTE!");
+        Debug.Log("All 3 ingredients are correct! Starting radial QTE!");
 
+        // Show the radial timing UI
         radialTimingUI.SetActive(true);
+
+        // Find the pointer controller
+        PointerController pointer =
+            radialTimingUI.GetComponentInChildren<PointerController>();
+
+        if (pointer != null)
+        {
+            // Reset and start the pointer
+            pointer.StartQTE();
+        }
+        else
+        {
+            Debug.LogWarning("PointerController was not found inside the Radial Timing UI!");
+        }
     }
 }
