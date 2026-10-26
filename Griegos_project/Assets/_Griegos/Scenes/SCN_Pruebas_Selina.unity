@@ -273,6 +273,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d6012e9f6f7b9e4ab2448303028b62e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0a6c72c026976074fa90226ad8992d9b, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d6012e9f6f7b9e4ab2448303028b62e, type: 3}
       propertyPath: m_Name
       value: "B\xE9zierCurve"
@@ -633,6 +637,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b6f51145cc7082e439dda4ea287ab4fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9ea592f47d625324694fb7975600d6ba, type: 2}
     - target: {fileID: 919132149155446097, guid: b6f51145cc7082e439dda4ea287ab4fc, type: 3}
       propertyPath: m_Name
       value: SM_Column_01.007 (2)
@@ -1383,6 +1391,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5fc49fe75ebe7444192322b2f3f3a5c9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 05c01090768cceb45ba221b8ba02c184, type: 2}
     - target: {fileID: 919132149155446097, guid: 5fc49fe75ebe7444192322b2f3f3a5c9, type: 3}
       propertyPath: m_Name
       value: SM_Counter_01.001
@@ -1959,6 +1971,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 48e95ccab15f9ad449e8ae2940240bbe, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6e0ec8cad3de94f4bb1c818422878cf8, type: 2}
     - target: {fileID: 919132149155446097, guid: 48e95ccab15f9ad449e8ae2940240bbe, type: 3}
       propertyPath: m_Name
       value: SM_BarrelStool_01 (1)
@@ -2454,6 +2470,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b6f51145cc7082e439dda4ea287ab4fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9ea592f47d625324694fb7975600d6ba, type: 2}
     - target: {fileID: 919132149155446097, guid: b6f51145cc7082e439dda4ea287ab4fc, type: 3}
       propertyPath: m_Name
       value: SM_Column_01.007
@@ -2741,6 +2761,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6d11c74cccf0f444fadab59bea721513, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6e0ec8cad3de94f4bb1c818422878cf8, type: 2}
     - target: {fileID: 919132149155446097, guid: 6d11c74cccf0f444fadab59bea721513, type: 3}
       propertyPath: m_Name
       value: SM_CeilingBase_03
@@ -3749,6 +3773,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b6f51145cc7082e439dda4ea287ab4fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9ea592f47d625324694fb7975600d6ba, type: 2}
     - target: {fileID: 919132149155446097, guid: b6f51145cc7082e439dda4ea287ab4fc, type: 3}
       propertyPath: m_Name
       value: SM_Column_01.007 (1)
@@ -3848,6 +3876,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: bb6f854db55f7ac4da97d938edeb76ec, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9ea592f47d625324694fb7975600d6ba, type: 2}
     - target: {fileID: 919132149155446097, guid: bb6f854db55f7ac4da97d938edeb76ec, type: 3}
       propertyPath: m_Name
       value: SM_BackWall_01.001
@@ -3905,6 +3937,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d6012e9f6f7b9e4ab2448303028b62e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0a6c72c026976074fa90226ad8992d9b, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d6012e9f6f7b9e4ab2448303028b62e, type: 3}
       propertyPath: m_Name
       value: "B\xE9zierCurve (1)"
@@ -4757,6 +4793,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 48e95ccab15f9ad449e8ae2940240bbe, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6e0ec8cad3de94f4bb1c818422878cf8, type: 2}
     - target: {fileID: 919132149155446097, guid: 48e95ccab15f9ad449e8ae2940240bbe, type: 3}
       propertyPath: m_Name
       value: SM_BarrelStool_01
@@ -4814,6 +4854,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 39e59a141a01d02418077bc866f8c291, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6e0ec8cad3de94f4bb1c818422878cf8, type: 2}
     - target: {fileID: 919132149155446097, guid: 39e59a141a01d02418077bc866f8c291, type: 3}
       propertyPath: m_Name
       value: SM_CeilingBase_01
@@ -5013,6 +5057,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b6f51145cc7082e439dda4ea287ab4fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9ea592f47d625324694fb7975600d6ba, type: 2}
     - target: {fileID: 919132149155446097, guid: b6f51145cc7082e439dda4ea287ab4fc, type: 3}
       propertyPath: m_Name
       value: SM_Column_01.007 (3)
