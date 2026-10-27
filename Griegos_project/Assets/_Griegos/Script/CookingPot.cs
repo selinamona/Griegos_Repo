@@ -28,6 +28,8 @@ public class CookingPot : MonoBehaviour
         {
             Debug.Log(item.itemName + " is NOT part of the selected recipe!");
 
+            RecipeManager.instance.satisfactionTimer.RemoveTime(10f);
+
             return false;
         }
 
