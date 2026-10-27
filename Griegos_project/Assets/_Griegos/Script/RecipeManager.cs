@@ -17,9 +17,9 @@ public class RecipeManager : MonoBehaviour
     {
         selectedIngredients = new string[]
         {
-            "Apple",
-            "Flour",
-            "Egg"
+            "Meat",
+            "Vegetables",
+            "Sauce"
         };
 
         Debug.Log("Recipe 1 selected!");
@@ -30,9 +30,9 @@ public class RecipeManager : MonoBehaviour
     {
         selectedIngredients = new string[]
         {
-            "Tomato",
-            "Cheese",
-            "Pasta"
+            "Vegetables",
+            "Oil",
+            "Cheese"
         };
 
         Debug.Log("Recipe 2 selected!");
@@ -43,9 +43,9 @@ public class RecipeManager : MonoBehaviour
     {
         selectedIngredients = new string[]
         {
-            "Potato",
-            "Meat",
-            "Herb"
+            "Fish",
+            "Vegetables",
+            "Potatoes"
         };
 
         Debug.Log("Recipe 3 selected!");

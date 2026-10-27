@@ -1298,7 +1298,6 @@ RectTransform:
   m_Children:
   - {fileID: 1205384639}
   - {fileID: 609563003}
-  - {fileID: 1936016758}
   m_Father: {fileID: 1663993372}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1592,7 +1591,7 @@ GameObject:
   - component: {fileID: 670803267}
   - component: {fileID: 670803266}
   m_Layer: 0
-  m_Name: GreenObject
+  m_Name: Sauce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1610,7 +1609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28744c2970eb6c74c955c4dd58d36b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldItem
-  itemName: Green
+  itemName: Sauce
   inventoryPrefab: {fileID: 5117729228760899753, guid: 8d126af3f552d9343a65fc1e890c3f30, type: 3}
 --- !u!135 &670803267
 SphereCollider:
@@ -2140,7 +2139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &725782470
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2148,17 +2147,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 725782469}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 825391097}
-  m_Father: {fileID: 1936016758}
+  m_Father: {fileID: 1685524234}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -143, y: -197}
+  m_AnchoredPosition: {x: 372.234, y: -196.05396}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &725782471
@@ -3225,6 +3224,7 @@ RectTransform:
   m_Children:
   - {fileID: 2072815448}
   - {fileID: 273316117}
+  - {fileID: 1516159223}
   m_Father: {fileID: 609563003}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3339,9 +3339,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnableDisable
   pageToOpen: {fileID: 273316114}
+  buttonToOpen: {fileID: 1516159222}
   pagesToClose:
   - {fileID: 1379319039}
   - {fileID: 780948333}
+  buttonsToClose:
+  - {fileID: 1372218627}
+  - {fileID: 725782469}
 --- !u!1 &1205384638
 GameObject:
   m_ObjectHideFlags: 0
@@ -3702,9 +3706,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnableDisable
   pageToOpen: {fileID: 1379319039}
+  buttonToOpen: {fileID: 1372218627}
   pagesToClose:
   - {fileID: 780948333}
   - {fileID: 273316114}
+  buttonsToClose:
+  - {fileID: 725782469}
+  - {fileID: 1516159222}
 --- !u!1 &1222137253
 GameObject:
   m_ObjectHideFlags: 0
@@ -4098,7 +4106,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1372218628
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4106,17 +4114,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372218627}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.47851565, y: 0.47851565, z: 0.47851565}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2101297955}
-  m_Father: {fileID: 1936016758}
+  m_Father: {fileID: 1379319042}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 214, y: -197}
+  m_AnchoredPosition: {x: -0.00012207031, y: -93.64319}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1372218629
@@ -4280,7 +4288,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.0897958, y: 2.0897958, z: 2.0897958}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1372218628}
   m_Father: {fileID: 1218159154}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4463,7 +4472,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1516159223
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4471,17 +4480,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516159222}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 847026942}
-  m_Father: {fileID: 1936016758}
+  m_Father: {fileID: 1202130303}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 551, y: -197}
+  m_AnchoredPosition: {x: 1066.2339, y: -34.303787}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1516159224
@@ -4802,7 +4811,7 @@ GameObject:
   - component: {fileID: 1592193112}
   - component: {fileID: 1592193111}
   m_Layer: 0
-  m_Name: PurpleObject
+  m_Name: Vegetables
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4820,7 +4829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28744c2970eb6c74c955c4dd58d36b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldItem
-  itemName: Purple
+  itemName: Vegetables
   inventoryPrefab: {fileID: 6304838975741451690, guid: eeff38af3bd3a284ca4f0d26aeca7cbe, type: 3}
 --- !u!135 &1592193112
 SphereCollider:
@@ -5420,6 +5429,7 @@ RectTransform:
   m_Children:
   - {fileID: 1216693318}
   - {fileID: 780948336}
+  - {fileID: 725782470}
   m_Father: {fileID: 609563003}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -5534,9 +5544,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnableDisable
   pageToOpen: {fileID: 780948333}
+  buttonToOpen: {fileID: 725782469}
   pagesToClose:
   - {fileID: 1379319039}
   - {fileID: 273316114}
+  buttonsToClose:
+  - {fileID: 1372218627}
+  - {fileID: 1516159222}
 --- !u!1001 &1690510174
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6092,7 +6106,7 @@ GameObject:
   - component: {fileID: 1814894644}
   - component: {fileID: 1814894643}
   m_Layer: 0
-  m_Name: BlueObject
+  m_Name: Meat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6110,7 +6124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28744c2970eb6c74c955c4dd58d36b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldItem
-  itemName: Blue
+  itemName: Meat
   inventoryPrefab: {fileID: 8922086789286910214, guid: c077aa96c9c08b249a4ae07c6e10f0d2, type: 3}
 --- !u!135 &1814894644
 SphereCollider:
@@ -6395,44 +6409,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuController
   menuCanvas: {fileID: 645139811}
---- !u!1 &1936016757
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1936016758}
-  m_Layer: 5
-  m_Name: ChooseButton
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1936016758
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1936016757}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1372218628}
-  - {fileID: 725782470}
-  - {fileID: 1516159223}
-  m_Father: {fileID: 548492634}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1948249245
 GameObject:
   m_ObjectHideFlags: 0
@@ -6887,12 +6863,12 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 1614238265}
   - {fileID: 246731721}
+  - {fileID: 1948249246}
   - {fileID: 1668782948}
   - {fileID: 881964093}
   - {fileID: 1892049748}
   - {fileID: 1414487237}
   - {fileID: 1295276164}
   - {fileID: 1253509476}
-  - {fileID: 1948249246}
   - {fileID: 925640485}
   - {fileID: 1222137255}
