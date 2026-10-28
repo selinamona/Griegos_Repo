@@ -21,15 +21,12 @@ public class SatisfactionTimer : MonoBehaviour
         if (!timerRunning)
             return;
 
-        // Count down normally
         currentTime -= Time.deltaTime;
 
-        // Prevent going below zero
-        if (currentTime <= 0)
+        if (currentTime <= 0f)
         {
-            currentTime = 0;
+            currentTime = 0f;
             timerRunning = false;
-
             TimerFinished();
         }
 
@@ -40,22 +37,21 @@ public class SatisfactionTimer : MonoBehaviour
     {
         currentTime = maxTime;
         timerRunning = true;
-
         UpdateBar();
-
-        Debug.Log("Satisfaction timer started!");
     }
 
     public void RemoveTime(float amount)
     {
         currentTime -= amount;
 
-        if (currentTime < 0)
-            currentTime = 0;
+        if (currentTime <= 0f)
+        {
+            currentTime = 0f;
+            timerRunning = false;
+            TimerFinished();
+        }
 
         UpdateBar();
-
-        Debug.Log("Lost " + amount + " seconds!");
     }
 
     void UpdateBar()
@@ -69,7 +65,21 @@ public class SatisfactionTimer : MonoBehaviour
     void TimerFinished()
     {
         Debug.Log("Time ran out!");
+    }
 
-        // We can connect your game-ending result here later.
+    public void ChangeTime(float amount)
+    {
+        currentTime += amount;
+
+        // Keep the timer between 0 and maxTime
+        currentTime = Mathf.Clamp(currentTime, 0f, maxTime);
+
+        UpdateBar();
+
+        if (currentTime <= 0f)
+        {
+            timerRunning = false;
+            TimerFinished();
+        }
     }
 }

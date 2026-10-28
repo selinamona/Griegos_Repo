@@ -76,6 +76,8 @@ public class PointerController : MonoBehaviour
             Debug.Log("Success!");
 
             retryManager.ShowResult("Success");
+
+            RecipeManager.instance.satisfactionTimer.ChangeTime(15f);
         }
 
         // Check mediocre zone
@@ -84,6 +86,8 @@ public class PointerController : MonoBehaviour
             Debug.Log("Mediocre!");
 
             retryManager.ShowResult("Mediocre");
+
+            RecipeManager.instance.satisfactionTimer.ChangeTime(5f);
         }
 
         // Otherwise it's a fail
@@ -92,6 +96,8 @@ public class PointerController : MonoBehaviour
             Debug.Log("Fail!");
 
             retryManager.ShowResult("Fail");
+
+            RecipeManager.instance.satisfactionTimer.ChangeTime(-15f);
         }
     }
 }
