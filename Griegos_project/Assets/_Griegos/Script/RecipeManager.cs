@@ -22,6 +22,8 @@ public class RecipeManager : MonoBehaviour
             "Sauce"
         };
 
+        FindObjectOfType<InkDialogueManager>().CloseDialogue();
+
         Debug.Log("Recipe 1 selected!");
     }
 
@@ -35,6 +37,8 @@ public class RecipeManager : MonoBehaviour
             "Cheese"
         };
 
+        FindObjectOfType<InkDialogueManager>().CloseDialogue();
+
         Debug.Log("Recipe 2 selected!");
     }
 
@@ -47,6 +51,8 @@ public class RecipeManager : MonoBehaviour
             "Vegetables",
             "Potatoes"
         };
+
+        FindObjectOfType<InkDialogueManager>().CloseDialogue();
 
         Debug.Log("Recipe 3 selected!");
     }
