@@ -111,28 +111,28 @@ ScriptedImporter:
     spriteBone:
     - name: Hair 13
       guid: 44792cdcd7150084194bf2b39f5a6e60
-      position: {x: -14.096081, y: 155.99944, z: 0}
-      rotation: {x: 0, y: 0, z: 0.98589164, w: 0.16738507}
-      length: 25.385996
-      parentId: 7
+      position: {x: 104.93806, y: -4.4835234, z: 0}
+      rotation: {x: 0, y: 0, z: 0.18465139, w: 0.9828041}
+      length: 25.385992
+      parentId: 15
       color:
         serializedVersion: 2
         rgba: 4294902015
     - name: Hair 12
       guid: 96f009c2df13c63438bc6b424602f368
-      position: {x: -3.6483238, y: 120.51532, z: 0}
-      rotation: {x: 0, y: 0, z: 0.800765, w: 0.5989787}
-      length: 36.990135
-      parentId: 7
+      position: {x: 73.929634, y: 15.684662, z: 0}
+      rotation: {x: 0, y: 0, z: -0.28435284, w: 0.9587197}
+      length: 36.990128
+      parentId: 15
       color:
         serializedVersion: 2
         rgba: 4294901760
     - name: Hair 11
       guid: b3fcd1bbe74e17b459f262101a02618e
-      position: {x: 28.493555, y: 113.655205, z: 0}
-      rotation: {x: 0, y: 0, z: 0.9944779, w: 0.1049461}
-      length: 32.865738
-      parentId: 7
+      position: {x: 45.047966, y: -0.00021051549, z: 0}
+      rotation: {x: 0, y: 0, z: 0.24620079, w: 0.9692189}
+      length: 32.86573
+      parentId: 15
       color:
         serializedVersion: 2
         rgba: 4294967040
@@ -201,26 +201,26 @@ ScriptedImporter:
         rgba: 4294902015
     - name: Hair 16
       guid: e8027d7d7bd635547bfefd712414dfa2
-      position: {x: -87.68201, y: -12.139565, z: 0}
-      rotation: {x: 0, y: 0, z: 0.8605239, w: 0.5094101}
-      length: 71.56036
-      parentId: 7
+      position: {x: 38.638535, y: 0.00023237625, z: 0}
+      rotation: {x: 0, y: 0, z: -0.37151298, w: 0.92842776}
+      length: 71.560326
+      parentId: 12
       color:
         serializedVersion: 2
         rgba: 4278255615
     - name: Hair 17
       guid: feb93254ce0e1054f9fe51edea86e272
-      position: {x: -122.10278, y: 50.598694, z: 0}
-      rotation: {x: -0, y: 0, z: 0.91933376, w: -0.39347887}
-      length: 38.920837
-      parentId: 7
+      position: {x: 90.44513, y: -49.365177, z: 0}
+      rotation: {x: 0, y: 0, z: 0.5297238, w: 0.8481703}
+      length: 38.92085
+      parentId: 12
       color:
         serializedVersion: 2
         rgba: 4286643968
     - name: Hair 15
       guid: 87b9fb01dfbbe48429739134bdec99f1
       position: {x: -50.85871, y: -23.842712, z: 0}
-      rotation: {x: 0, y: 0, z: 0.98818654, w: 0.15325575}
+      rotation: {x: 0, y: 0, z: 0.9881865, w: 0.15325633}
       length: 38.638416
       parentId: 7
       color:
@@ -237,18 +237,18 @@ ScriptedImporter:
         rgba: 4294901888
     - name: Hair 9
       guid: 1a6e8a19d548fb4488fd73bb96b872dc
-      position: {x: 13.570121, y: -32.389233, z: 0}
-      rotation: {x: 0, y: 0, z: -0.20247146, w: 0.97928816}
+      position: {x: 29.052425, y: 0.00001843345, z: 0}
+      rotation: {x: 0, y: 0, z: 0.3592796, w: 0.93323004}
       length: 31.165178
-      parentId: 7
+      parentId: 13
       color:
         serializedVersion: 2
         rgba: 4286578943
     - name: Hair 10
       guid: 0aae8996fc423eb46acc3a469d254bf4
       position: {x: 62.721252, y: 84.3669, z: 0}
-      rotation: {x: 0, y: 0, z: 0.9380304, w: 0.34655303}
-      length: 45.04826
+      rotation: {x: 0, y: 0, z: 0.93802947, w: 0.34655568}
+      length: 45.048042
       parentId: 7
       color:
         serializedVersion: 2
@@ -3336,9 +3336,9 @@ ScriptedImporter:
     spriteBone:
     - name: Left eyebrow 2.1
       guid: d773fb33be94d1b4a8be1698442aebbe
-      position: {x: 12.705026, y: -0.00008243277, z: 0}
-      rotation: {x: 0, y: 0, z: -0.34521273, w: 0.93852454}
-      length: 35.72262
+      position: {x: 12.704595, y: 0.00001830122, z: 0}
+      rotation: {x: 0, y: 0, z: -0.3452148, w: 0.9385237}
+      length: 35.722614
       parentId: 1
       color:
         serializedVersion: 2
@@ -3346,17 +3346,17 @@ ScriptedImporter:
     - name: Left eyebrow 2
       guid: 4e56e72c8359b8f4dbcdcb363e43b830
       position: {x: 102.67151, y: 17.433289, z: 0}
-      rotation: {x: 0, y: 0, z: 0.21170102, w: 0.9773345}
-      length: 12.704966
+      rotation: {x: 0, y: 0, z: 0.21170314, w: 0.977334}
+      length: 12.704857
       parentId: -1
       color:
         serializedVersion: 2
         rgba: 4286578943
     - name: Right eyebrow 1.1
       guid: 8397bc35da0b2734384626b8b0c61f00
-      position: {x: 11.859908, y: 0.00015034644, z: 0}
-      rotation: {x: 0, y: 0, z: -0.3475881, w: -0.93764734}
-      length: 40.743095
+      position: {x: 11.8598795, y: 0.00010003055, z: 0}
+      rotation: {x: 0, y: 0, z: 0.34757996, w: 0.9376504}
+      length: 40.74308
       parentId: 3
       color:
         serializedVersion: 2
@@ -3364,8 +3364,8 @@ ScriptedImporter:
     - name: Right eyebrow 1
       guid: 9aefcb3c075905944acce7768a8d49f0
       position: {x: 53.60266, y: 14.979858, z: 0}
-      rotation: {x: 0, y: 0, z: 0.9863281, w: 0.16479324}
-      length: 11.859852
+      rotation: {x: 0, y: 0, z: -0.9863296, w: -0.16478465}
+      length: 11.859906
       parentId: -1
       color:
         serializedVersion: 2
@@ -4989,17 +4989,17 @@ ScriptedImporter:
     spriteBone:
     - name: Body 3
       guid: 549b9542e1f078341afe37e5acf4d8d1
-      position: {x: 291.4906, y: 227.33182, z: 0}
-      rotation: {x: 0, y: 0, z: -0.6221801, w: 0.7828742}
-      length: 226.26855
-      parentId: -1
+      position: {x: 398.81146, y: 141.0288, z: 0}
+      rotation: {x: 0, y: 0, z: 0.36933208, w: 0.9292975}
+      length: 226.26854
+      parentId: 5
       color:
         serializedVersion: 2
         rgba: 4294967040
     - name: Left hand
       guid: c76002c2ec142cc4bba27b33262fdba5
-      position: {x: 247.22047, y: -0.0000141427845, z: 0}
-      rotation: {x: 0, y: 0, z: -0.6192814, w: 0.7851692}
+      position: {x: 247.22058, y: -0.000022402659, z: 0}
+      rotation: {x: 0, y: 0, z: -0.6192816, w: 0.785169}
       length: 58.283062
       parentId: 2
       color:
@@ -5007,9 +5007,9 @@ ScriptedImporter:
         rgba: 4278223103
     - name: Left forearm
       guid: e5cb6ab1169c6c24fb74d22acda6240c
-      position: {x: 241.15688, y: 0.00005863393, z: 0}
-      rotation: {x: 0, y: 0, z: -0.5798569, w: 0.81471837}
-      length: 247.22054
+      position: {x: 241.15675, y: 0.000012340697, z: 0}
+      rotation: {x: 0, y: 0, z: -0.57985693, w: 0.81471837}
+      length: 247.22044
       parentId: 3
       color:
         serializedVersion: 2
@@ -5017,8 +5017,8 @@ ScriptedImporter:
     - name: Left arm
       guid: 73e7cae36195f7b418e3012ab72db21f
       position: {x: 481.1892, y: 621.6691, z: 0}
-      rotation: {x: 0, y: 0, z: -0.44792768, w: 0.8940698}
-      length: 241.15685
+      rotation: {x: 0, y: 0, z: -0.44792753, w: 0.89406985}
+      length: 241.15674
       parentId: -1
       color:
         serializedVersion: 2
@@ -5035,8 +5035,8 @@ ScriptedImporter:
     - name: Body 1
       guid: eeb3f92aa6fd2124dab9c818eaadb9ce
       position: {x: 370.93744, y: 642.81683, z: 0}
-      rotation: {x: 0, y: 0, z: -0.8673309, w: 0.49773192}
-      length: 209.35457
+      rotation: {x: 0, y: 0, z: -0.86733085, w: 0.49773207}
+      length: 209.3545
       parentId: -1
       color:
         serializedVersion: 2
@@ -5045,7 +5045,7 @@ ScriptedImporter:
       guid: ae6b551474a0b2448b02cb90f858e883
       position: {x: 229.63675, y: 579.9576, z: 0}
       rotation: {x: 0, y: 0, z: -0.8773744, w: 0.47980645}
-      length: 246.18625
+      length: 246.1861
       parentId: -1
       color:
         serializedVersion: 2
@@ -5070,28 +5070,28 @@ ScriptedImporter:
         rgba: 4286578943
     - name: Right forearm
       guid: cc25d65ab5b2b56468abc259315ff3ca
-      position: {x: 246.18625, y: 0.00006503306, z: 0}
-      rotation: {x: 0, y: 0, z: 0.5661353, w: 0.82431245}
-      length: 183.1545
+      position: {x: 246.1861, y: 0.00014410359, z: 0}
+      rotation: {x: 0, y: 0, z: 0.5661355, w: 0.82431227}
+      length: 183.15448
       parentId: 6
       color:
         serializedVersion: 2
         rgba: 4286643968
     - name: bone_10
       guid: da03e94bf1cb94a4aa684558c21c4933
-      position: {x: 183.15446, y: -0.000029603309, z: 0}
-      rotation: {x: 0, y: 0, z: 0.570983, w: 0.82096195}
-      length: 42.045734
+      position: {x: 183.15454, y: 0.0000035534322, z: 0}
+      rotation: {x: 0, y: 0, z: 0.5709828, w: 0.820962}
+      length: 42.04573
       parentId: 9
       color:
         serializedVersion: 2
         rgba: 4294934528
     - name: Body 2
       guid: 9a3106710a5f26c4da44155b3e097b47
-      position: {x: 265.3127, y: 462.0609, z: 0}
-      rotation: {x: 0, y: 0, z: -0.66676956, w: 0.74526393}
+      position: {x: 209.35446, y: 0.000046802645, z: 0}
+      rotation: {x: 0, y: 0, z: 0.31451795, w: 0.9492516}
       length: 236.18427
-      parentId: -1
+      parentId: 5
       color:
         serializedVersion: 2
         rgba: 4278255360
@@ -6112,9 +6112,9 @@ ScriptedImporter:
     spriteBone:
     - name: Big hair 2
       guid: 456c501b3b33c6041b5d25ae59f14fd3
-      position: {x: 142.5146, y: -0.00002205556, z: 0}
-      rotation: {x: 0, y: 0, z: 0.31290555, w: 0.9497843}
-      length: 124.95297
+      position: {x: 142.51466, y: -0.000021590899, z: 0}
+      rotation: {x: 0, y: 0, z: 0.31290543, w: 0.94978434}
+      length: 124.952995
       parentId: 1
       color:
         serializedVersion: 2
@@ -6122,8 +6122,8 @@ ScriptedImporter:
     - name: Big hair 1
       guid: a5936af0226dba84bbd0e7290cb20391
       position: {x: 151.68286, y: 279.67883, z: 0}
-      rotation: {x: 0, y: 0, z: -0.792218, w: 0.61023813}
-      length: 142.51457
+      rotation: {x: 0, y: 0, z: -0.7922179, w: 0.6102383}
+      length: 142.5147
       parentId: -1
       color:
         serializedVersion: 2
@@ -7206,52 +7206,52 @@ ScriptedImporter:
     - name: Body 1
       guid: eeb3f92aa6fd2124dab9c818eaadb9ce
       position: {x: 467.93744, y: 737.81683, z: 0}
-      rotation: {x: 0, y: 0, z: -0.8673309, w: 0.49773192}
-      length: 209.35457
+      rotation: {x: 0, y: 0, z: -0.86733085, w: 0.49773207}
+      length: 209.35449
       parentId: -1
       color:
         serializedVersion: 2
         rgba: 4278255615
     - name: Body 2
       guid: 9a3106710a5f26c4da44155b3e097b47
-      position: {x: 362.3127, y: 557.0609, z: 0}
-      rotation: {x: 0, y: 0, z: -0.66676956, w: 0.74526393}
+      position: {x: 209.35448, y: 0.00006009448, z: 0}
+      rotation: {x: 0, y: 0, z: 0.31451795, w: 0.9492516}
       length: 236.18428
-      parentId: -1
+      parentId: 1
       color:
         serializedVersion: 2
         rgba: 4278255360
     - name: Body 3
       guid: 549b9542e1f078341afe37e5acf4d8d1
-      position: {x: 388.4906, y: 322.33182, z: 0}
-      rotation: {x: 0, y: 0, z: -0.6221801, w: 0.7828742}
+      position: {x: 398.8114, y: 141.02876, z: 0}
+      rotation: {x: 0, y: 0, z: 0.3693321, w: 0.9292975}
       length: 226.26855
-      parentId: -1
+      parentId: 1
       color:
         serializedVersion: 2
         rgba: 4294967040
     - name: Left arm
       guid: 73e7cae36195f7b418e3012ab72db21f
       position: {x: 578.1892, y: 716.6691, z: 0}
-      rotation: {x: 0, y: 0, z: -0.44792768, w: 0.8940698}
-      length: 241.15685
+      rotation: {x: 0, y: 0, z: -0.44792753, w: 0.89406985}
+      length: 241.15674
       parentId: -1
       color:
         serializedVersion: 2
         rgba: 4294901760
     - name: Left forearm
       guid: e5cb6ab1169c6c24fb74d22acda6240c
-      position: {x: 241.15689, y: 0.000041099425, z: 0}
-      rotation: {x: 0, y: 0, z: -0.5798569, w: 0.81471837}
-      length: 247.22054
+      position: {x: 241.15668, y: -0.00007331118, z: 0}
+      rotation: {x: 0, y: 0, z: -0.57985693, w: 0.81471837}
+      length: 247.22044
       parentId: 4
       color:
         serializedVersion: 2
         rgba: 4294902015
     - name: Left hand
       guid: c76002c2ec142cc4bba27b33262fdba5
-      position: {x: 247.2205, y: 0.000023054454, z: 0}
-      rotation: {x: 0, y: 0, z: -0.6192814, w: 0.7851692}
+      position: {x: 247.22047, y: 0.000035522447, z: 0}
+      rotation: {x: 0, y: 0, z: -0.6192816, w: 0.78516906}
       length: 58.28306
       parentId: 5
       color:
@@ -7261,24 +7261,24 @@ ScriptedImporter:
       guid: ae6b551474a0b2448b02cb90f858e883
       position: {x: 326.63675, y: 674.9576, z: 0}
       rotation: {x: 0, y: 0, z: -0.8773744, w: 0.47980645}
-      length: 246.18625
+      length: 246.18608
       parentId: -1
       color:
         serializedVersion: 2
         rgba: 4278255488
     - name: Right forearm
       guid: cc25d65ab5b2b56468abc259315ff3ca
-      position: {x: 246.18623, y: 0.000063987805, z: 0}
-      rotation: {x: 0, y: 0, z: 0.5661352, w: 0.8243124}
-      length: 183.15451
+      position: {x: 246.18608, y: 0.00014305832, z: 0}
+      rotation: {x: 0, y: 0, z: 0.56613547, w: 0.8243122}
+      length: 183.1545
       parentId: 7
       color:
         serializedVersion: 2
         rgba: 4286643968
     - name: bone_10
       guid: da03e94bf1cb94a4aa684558c21c4933
-      position: {x: 183.15454, y: -0.000012274339, z: 0}
-      rotation: {x: 0, y: 0, z: 0.570983, w: 0.8209619}
+      position: {x: 183.15454, y: -0.000016340167, z: 0}
+      rotation: {x: 0, y: 0, z: 0.5709828, w: 0.820962}
       length: 42.045734
       parentId: 8
       color:
@@ -7305,16 +7305,16 @@ ScriptedImporter:
     - name: Big hair 1
       guid: a5936af0226dba84bbd0e7290cb20391
       position: {x: 46.941475, y: 511.8817, z: 0}
-      rotation: {x: 0, y: 0, z: -0.19989565, w: 0.9798172}
-      length: 142.51457
+      rotation: {x: 0, y: 0, z: -0.19989544, w: 0.9798173}
+      length: 142.51471
       parentId: 0
       color:
         serializedVersion: 2
         rgba: 4278255615
     - name: Big hair 2
       guid: 456c501b3b33c6041b5d25ae59f14fd3
-      position: {x: 142.51462, y: -0.0000011788798, z: 0}
-      rotation: {x: 0, y: 0, z: 0.3129056, w: 0.9497843}
+      position: {x: 142.51471, y: 0.000025841768, z: 0}
+      rotation: {x: 0, y: 0, z: 0.3129054, w: 0.94978434}
       length: 124.95298
       parentId: 12
       color:
@@ -7394,46 +7394,46 @@ ScriptedImporter:
         rgba: 4294901888
     - name: Hair 9
       guid: 1a6e8a19d548fb4488fd73bb96b872dc
-      position: {x: 13.570099, y: -32.389286, z: 0}
-      rotation: {x: 0, y: 0, z: -0.20247148, w: 0.97928816}
+      position: {x: 29.052416, y: -0.000005171609, z: 0}
+      rotation: {x: 0, y: 0, z: 0.35927963, w: 0.93323}
       length: 31.165182
-      parentId: 14
+      parentId: 21
       color:
         serializedVersion: 2
         rgba: 4286578943
     - name: Hair 10
       guid: 0aae8996fc423eb46acc3a469d254bf4
       position: {x: 62.72128, y: 84.36693, z: 0}
-      rotation: {x: 0, y: 0, z: 0.9380304, w: 0.346553}
-      length: 45.048267
+      rotation: {x: 0, y: -0, z: 0.9380294, w: 0.34655565}
+      length: 45.048058
       parentId: 14
       color:
         serializedVersion: 2
         rgba: 4278255360
     - name: Hair 11
       guid: b3fcd1bbe74e17b459f262101a02618e
-      position: {x: 28.493559, y: 113.65522, z: 0}
-      rotation: {x: 0, y: 0, z: 0.9944779, w: 0.10494609}
+      position: {x: 45.04802, y: -0.000074548334, z: 0}
+      rotation: {x: 0, y: 0, z: 0.24620083, w: 0.9692189}
       length: 32.86574
-      parentId: 14
+      parentId: 23
       color:
         serializedVersion: 2
         rgba: 4294967040
     - name: Hair 12
       guid: 96f009c2df13c63438bc6b424602f368
-      position: {x: -3.6483264, y: 120.51531, z: 0}
-      rotation: {x: 0, y: 0, z: 0.80076504, w: 0.59897864}
+      position: {x: 73.929726, y: 15.684778, z: 0}
+      rotation: {x: 0, y: 0, z: -0.28435272, w: 0.95871973}
       length: 36.990147
-      parentId: 14
+      parentId: 23
       color:
         serializedVersion: 2
         rgba: 4294901760
     - name: Hair 13
       guid: 44792cdcd7150084194bf2b39f5a6e60
-      position: {x: -14.096109, y: 155.99944, z: 0}
-      rotation: {x: 0, y: 0, z: 0.98589164, w: 0.16738509}
+      position: {x: 104.93812, y: -4.483476, z: 0}
+      rotation: {x: 0, y: 0, z: 0.18465137, w: 0.9828041}
       length: 25.386002
-      parentId: 14
+      parentId: 23
       color:
         serializedVersion: 2
         rgba: 4294902015
@@ -7449,43 +7449,43 @@ ScriptedImporter:
     - name: Hair 15
       guid: 87b9fb01dfbbe48429739134bdec99f1
       position: {x: -50.858654, y: -23.84272, z: 0}
-      rotation: {x: 0, y: 0, z: 0.9881866, w: 0.15325576}
-      length: 38.63841
+      rotation: {x: 0, y: -0, z: 0.9881865, w: 0.15325631}
+      length: 38.638416
       parentId: 14
       color:
         serializedVersion: 2
         rgba: 4278190335
     - name: Hair 16
       guid: e8027d7d7bd635547bfefd712414dfa2
-      position: {x: -87.682, y: -12.139546, z: 0}
-      rotation: {x: 0, y: 0, z: 0.86052394, w: 0.50941014}
+      position: {x: 38.638466, y: 0.00009835661, z: 0}
+      rotation: {x: 0, y: 0, z: -0.37151304, w: 0.92842776}
       length: 71.560356
-      parentId: 14
+      parentId: 28
       color:
         serializedVersion: 2
         rgba: 4278255615
     - name: Hair 17
       guid: feb93254ce0e1054f9fe51edea86e272
-      position: {x: -122.10282, y: 50.598705, z: 0}
-      rotation: {x: 0, y: 0, z: 0.9193337, w: -0.39347884}
+      position: {x: 90.44504, y: -49.365322, z: 0}
+      rotation: {x: 0, y: 0, z: 0.5297237, w: 0.84817034}
       length: 38.920853
-      parentId: 14
+      parentId: 28
       color:
         serializedVersion: 2
         rgba: 4286643968
     - name: Right eyebrow 1
       guid: 9aefcb3c075905944acce7768a8d49f0
       position: {x: 380.785, y: 780.5496, z: 0}
-      rotation: {x: 0, y: 0, z: 0.8537581, w: -0.5206699}
-      length: 11.859851
+      rotation: {x: 0, y: -0, z: -0.85375357, w: 0.5206773}
+      length: 11.859907
       parentId: 0
       color:
         serializedVersion: 2
         rgba: 4294934528
     - name: Right eyebrow 1.1
       guid: 8397bc35da0b2734384626b8b0c61f00
-      position: {x: 11.859855, y: 0.0001058425, z: 0}
-      rotation: {x: 0, y: 0, z: -0.3475881, w: -0.93764734}
+      position: {x: 11.859852, y: 0.0000058517107, z: 0}
+      rotation: {x: 0, y: 0, z: 0.34757996, w: 0.93765044}
       length: 40.74309
       parentId: 31
       color:
@@ -7494,16 +7494,16 @@ ScriptedImporter:
     - name: Left eyebrow 2
       guid: 4e56e72c8359b8f4dbcdcb363e43b830
       position: {x: 385.41946, y: 829.4607, z: 0}
-      rotation: {x: 0, y: 0, z: 0.7995219, w: 0.6006369}
-      length: 12.704967
+      rotation: {x: 0, y: -0, z: 0.79952323, w: 0.6006352}
+      length: 12.704857
       parentId: 0
       color:
         serializedVersion: 2
         rgba: 4286578943
     - name: Left eyebrow 2.1
       guid: d773fb33be94d1b4a8be1698442aebbe
-      position: {x: 12.704917, y: -0.00003093302, z: 0}
-      rotation: {x: 0, y: 0, z: -0.34521267, w: 0.9385245}
+      position: {x: 12.704754, y: -0.00002443591, z: 0}
+      rotation: {x: 0, y: 0, z: -0.34521478, w: 0.9385237}
       length: 35.72262
       parentId: 33
       color:
