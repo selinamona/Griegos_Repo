@@ -7567,7 +7567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldItem
   itemName: Sauce
-  inventoryPrefab: {fileID: 5117729228760899753, guid: 8d126af3f552d9343a65fc1e890c3f30, type: 3}
+  inventoryPrefab: {fileID: 4435760210328793571, guid: 76f34c2873216a94d9d503a64f9c2cf4, type: 3}
 --- !u!135 &670803267
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -21894,7 +21894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1133754845442841152, guid: 2f0b76c8b7467404887560092eef81fa, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1622080873879179137, guid: 2f0b76c8b7467404887560092eef81fa, type: 3}
       propertyPath: m_AnchorMax.y
@@ -22947,7 +22947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldItem
   itemName: Vegetables
-  inventoryPrefab: {fileID: 6304838975741451690, guid: eeff38af3bd3a284ca4f0d26aeca7cbe, type: 3}
+  inventoryPrefab: {fileID: 4824641852089816997, guid: 6133f86a7c72f85478e2cb8486d666f1, type: 3}
 --- !u!135 &1592193112
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -29459,7 +29459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldItem
   itemName: Meat
-  inventoryPrefab: {fileID: 8922086789286910214, guid: c077aa96c9c08b249a4ae07c6e10f0d2, type: 3}
+  inventoryPrefab: {fileID: 8493814293923125007, guid: 33c0b4b896f19c94099fe9b8a64259bb, type: 3}
 --- !u!135 &1814894644
 SphereCollider:
   m_ObjectHideFlags: 0
