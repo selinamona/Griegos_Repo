@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class PointerController : MonoBehaviour
@@ -8,10 +9,11 @@ public class PointerController : MonoBehaviour
     public RectTransform midZone;
     public float moveSpeed = 100f;
 
-    // Reference to the result/retry manager
     public RetryManager retryManager;
 
-    // Prevents the player from getting multiple results
+    // NEW: Reference to the CookingPot
+    public CookingPot cookingPot;
+
     private bool gameFinished = false;
 
     private RectTransform pointerTransform;
@@ -29,14 +31,15 @@ public class PointerController : MonoBehaviour
 
     void Update()
     {
-        // Stop the pointer after getting a result
         if (gameFinished)
             return;
 
-        // Move the pointer towards the target position
-        pointerTransform.position = Vector3.MoveTowards(pointerTransform.position,targetPosition,moveSpeed * Time.deltaTime);
+        pointerTransform.position = Vector3.MoveTowards(
+            pointerTransform.position,
+            targetPosition,
+            moveSpeed * Time.deltaTime
+        );
 
-        // Change direction when reaching the points
         if (Vector3.Distance(pointerTransform.position, pointA.position) < 0.1f)
         {
             targetPosition = pointB.position;
@@ -46,7 +49,6 @@ public class PointerController : MonoBehaviour
             targetPosition = pointA.position;
         }
 
-        // Check for input
         if (Input.GetKeyDown(KeyCode.Space))
         {
             CheckResult();
@@ -67,30 +69,25 @@ public class PointerController : MonoBehaviour
 
     void CheckResult()
     {
-        // Prevent multiple results
         gameFinished = true;
 
-        // Check the green safe zone first
-        if (RectTransformUtility.RectangleContainsScreenPoint(safeZone,pointerTransform.position,null))
+        if (RectTransformUtility.RectangleContainsScreenPoint(
+            safeZone, pointerTransform.position, null))
         {
             Debug.Log("Success!");
 
-            retryManager.ShowResult("Success");
+            // NEW: Finish cooking instead of showing Retry
+            cookingPot.FinishCooking();
         }
-
-        // Check mediocre zone
-        else if (RectTransformUtility.RectangleContainsScreenPoint(midZone,pointerTransform.position,null))
+        else if (RectTransformUtility.RectangleContainsScreenPoint(
+            midZone, pointerTransform.position, null))
         {
             Debug.Log("Mediocre!");
-
             retryManager.ShowResult("Mediocre");
         }
-
-        // Otherwise it's a fail
         else
         {
             Debug.Log("Fail!");
-
             retryManager.ShowResult("Fail");
         }
     }
