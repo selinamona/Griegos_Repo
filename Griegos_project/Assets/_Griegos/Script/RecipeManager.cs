@@ -3,6 +3,7 @@ using UnityEngine;
 public class RecipeManager : MonoBehaviour
 {
     public static RecipeManager instance;
+    public SatisfactionTimer satisfactionTimer;
 
     // The ingredients required for the currently selected recipe
     public string[] selectedIngredients;
@@ -25,6 +26,8 @@ public class RecipeManager : MonoBehaviour
         FindObjectOfType<InkDialogueManager>().CloseDialogue();
 
         Debug.Log("Recipe 1 selected!");
+
+        satisfactionTimer.StartTimer();
     }
 
     // Choose Recipe 2
@@ -40,6 +43,8 @@ public class RecipeManager : MonoBehaviour
         FindObjectOfType<InkDialogueManager>().CloseDialogue();
 
         Debug.Log("Recipe 2 selected!");
+
+        satisfactionTimer.StartTimer();
     }
 
     // Choose Recipe 3
@@ -55,6 +60,8 @@ public class RecipeManager : MonoBehaviour
         FindObjectOfType<InkDialogueManager>().CloseDialogue();
 
         Debug.Log("Recipe 3 selected!");
+
+        satisfactionTimer.StartTimer();
     }
 
     // Checks if an ingredient belongs to the selected recipe
