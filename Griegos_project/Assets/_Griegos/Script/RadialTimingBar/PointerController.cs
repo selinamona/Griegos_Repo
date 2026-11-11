@@ -9,12 +9,12 @@ public class PointerController : MonoBehaviour
     public RectTransform midZone;
     public float moveSpeed = 100f;
 
-    public RetryManager retryManager;
 
     // NEW: Reference to the CookingPot
     public CookingPot cookingPot;
 
     private bool gameFinished = false;
+    private bool qteActive = false;
 
     private RectTransform pointerTransform;
     private Vector3 targetPosition;
@@ -67,28 +67,30 @@ public class PointerController : MonoBehaviour
         targetPosition = pointB.position;
     }
 
+
     void CheckResult()
     {
         gameFinished = true;
+        qteActive = false;
+
+        string cookingResult;
 
         if (RectTransformUtility.RectangleContainsScreenPoint(
             safeZone, pointerTransform.position, null))
         {
-            Debug.Log("Success!");
-
-            // NEW: Finish cooking instead of showing Retry
-            cookingPot.FinishCooking();
+            cookingResult = "Success";
         }
         else if (RectTransformUtility.RectangleContainsScreenPoint(
             midZone, pointerTransform.position, null))
         {
-            Debug.Log("Mediocre!");
-            retryManager.ShowResult("Mediocre");
+            cookingResult = "Mid";
         }
         else
         {
-            Debug.Log("Fail!");
-            retryManager.ShowResult("Fail");
+            cookingResult = "Fail";
         }
+
+        cookingPot.FinishCooking(cookingResult);
     }
+
 }

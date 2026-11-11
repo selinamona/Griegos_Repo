@@ -49,6 +49,15 @@ void AddItemToSlot(WorldItem worldItem, Slot slot)
         if (dragHandler != null)
         {
             dragHandler.worldItem = worldItem;
+
+            FinishedDishPickup finishedDish =
+                worldItem.GetComponent<FinishedDishPickup>();
+
+            if (finishedDish != null)
+            {
+                dragHandler.isFinishedDish = true;
+                dragHandler.cookingResult = finishedDish.cookingResult;
+            }
         }
 
         // Tell the slot that it contains this item

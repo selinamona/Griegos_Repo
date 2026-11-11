@@ -1,4 +1,5 @@
 
+
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,104 +8,83 @@ public class CookingPot : MonoBehaviour
     public int requiredIngredients = 3;
 
     public GameObject radialTimingUI;
+    public PointerController pointer;
 
-    // NEW: Finished dish settings
+    [Header("Finished Dish")]
     public GameObject finishedDishPrefab;
     public Transform dishSpawnPoint;
 
     private List<WorldItem> ingredients = new List<WorldItem>();
-
     private bool cookingFinished = false;
 
     public bool AddIngredient(WorldItem item)
     {
-        if (item == null)
-            return false;
+        if (item == null) return false;
 
         if (RecipeManager.instance == null)
         {
-            Debug.Log("No RecipeManager found!");
+            Debug.LogError("No RecipeManager found!");
             return false;
         }
 
         if (!RecipeManager.instance.IsIngredientCorrect(item.itemName))
         {
-            Debug.Log(item.itemName + " is NOT part of the selected recipe!");
+            Debug.Log(item.itemName + " is NOT part of the recipe!");
             return false;
         }
 
         if (ingredients.Contains(item))
-        {
-            Debug.Log(item.itemName + " is already in the pot!");
             return false;
-        }
 
         ingredients.Add(item);
 
-        Debug.Log(item.itemName + " was accepted!");
+        item.gameObject.SetActive(false);
 
         CheckRecipe();
-
         return true;
     }
 
     void CheckRecipe()
     {
         if (ingredients.Count >= requiredIngredients)
-        {
             StartRadialQTE();
-        }
     }
 
     void StartRadialQTE()
     {
-        Debug.Log("All 3 ingredients are correct! Starting radial QTE!");
+        if (cookingFinished) return;
 
         radialTimingUI.SetActive(true);
-
-        PointerController pointer =
-            radialTimingUI.GetComponentInChildren<PointerController>();
-
-        if (pointer != null)
-        {
-            pointer.StartQTE();
-        }
-        else
-        {
-            Debug.LogWarning("PointerController was not found inside the Radial Timing UI!");
-        }
+        pointer.StartQTE();
     }
 
-    // NEW: Called when the radial QTE succeeds
-    public void FinishCooking()
+
+    public void FinishCooking(string cookingResult)
     {
-        if (cookingFinished)
-            return;
+        if (cookingFinished) return;
 
         cookingFinished = true;
-
-        // Hide the radial timing UI
         radialTimingUI.SetActive(false);
 
-        // Choose where the dish appears
         Transform spawnPoint = dishSpawnPoint != null
             ? dishSpawnPoint
             : transform;
 
-        // Spawn the finished 3D dish
-        if (finishedDishPrefab != null)
-        {
-            Instantiate(
-                finishedDishPrefab,
-                spawnPoint.position,
-                spawnPoint.rotation
-            );
+        GameObject dish = Instantiate(
+            finishedDishPrefab,
+            spawnPoint.position,
+            spawnPoint.rotation
+        );
 
-            Debug.Log("Finished dish spawned!");
-        }
-        else
+        FinishedDishPickup pickup = dish.GetComponent<FinishedDishPickup>();
+
+        if (pickup != null)
         {
-            Debug.LogWarning("Finished Dish Prefab has not been assigned!");
+            pickup.cookingResult = cookingResult;
         }
+
+        Debug.Log("Dish spawned with result: " + cookingResult);
     }
+
 }
+
