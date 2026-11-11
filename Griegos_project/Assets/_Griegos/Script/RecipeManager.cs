@@ -50,7 +50,18 @@ public class RecipeManager : MonoBehaviour
     // Choose Recipe 3
     public void ChooseRecipe3()
     {
-        Debug.Log("CHOOSE RECIPE 3 BUTTON PRESSED!");
+        selectedIngredients = new string[]
+        {
+        "Cheese",
+        "Vegetables",
+        "Oil"
+        };
+
+        FindObjectOfType<InkDialogueManager>().CloseDialogue();
+
+        Debug.Log("Recipe 3 selected!");
+
+        satisfactionTimer.StartTimer();
     }
 
     // Checks if an ingredient belongs to the selected recipe

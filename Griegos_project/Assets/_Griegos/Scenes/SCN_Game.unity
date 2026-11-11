@@ -54811,9 +54811,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 382773051}
-        m_TargetAssemblyTypeName: RecipeManager, Assembly-CSharp
-        m_MethodName: ChooseRecipe3
+      - m_Target: {fileID: 6917675808644541736}
+        m_TargetAssemblyTypeName: ChooseRecipeButton, Assembly-CSharp
+        m_MethodName: ChooseRecipe
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -55464,6 +55464,7 @@ GameObject:
   - component: {fileID: 3189814824708283824}
   - component: {fileID: 6917675808644541735}
   - component: {fileID: 2345321698854053891}
+  - component: {fileID: 6917675808644541736}
   m_Layer: 5
   m_Name: ChooseButton_3
   m_TagString: Untagged
@@ -56216,7 +56217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &5967504072614817957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56741,6 +56742,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6917675808644541736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4029420126634889241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91846c9b0c5e4e04db31777a83378f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChooseRecipeButton
+  recipeManager: {fileID: 382773051}
+  dialogueManager: {fileID: 1934015474}
+  recipeNumber: 3
 --- !u!114 &6928580484553364164
 MonoBehaviour:
   m_ObjectHideFlags: 0
