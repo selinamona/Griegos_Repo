@@ -135,4 +135,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ServedDishVFX
   successSparkles: {fileID: 1498513561354434616, guid: 5a6e26d16d7d3494d8e037690327578f, type: 3}
-  failSmoke: {fileID: 0}
+  failSmoke: {fileID: 2203320333479095063, guid: 3f261fe5b0c1243429100119d67433f0, type: 3}
