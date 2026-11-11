@@ -18,9 +18,9 @@ public class RecipeManager : MonoBehaviour
     {
         selectedIngredients = new string[]
         {
-            "Meat",
+            "Fish",
             "Vegetables",
-            "Sauce"
+            "Potatos"
         };
 
         FindObjectOfType<InkDialogueManager>().CloseDialogue();
@@ -36,8 +36,8 @@ public class RecipeManager : MonoBehaviour
         selectedIngredients = new string[]
         {
             "Vegetables",
-            "Oil",
-            "Cheese"
+            "Meat",
+            "Sauce"
         };
 
         FindObjectOfType<InkDialogueManager>().CloseDialogue();
@@ -50,18 +50,7 @@ public class RecipeManager : MonoBehaviour
     // Choose Recipe 3
     public void ChooseRecipe3()
     {
-        selectedIngredients = new string[]
-        {
-            "Fish",
-            "Vegetables",
-            "Potatoes"
-        };
-
-        FindObjectOfType<InkDialogueManager>().CloseDialogue();
-
-        Debug.Log("Recipe 3 selected!");
-
-        satisfactionTimer.StartTimer();
+        Debug.Log("CHOOSE RECIPE 3 BUTTON PRESSED!");
     }
 
     // Checks if an ingredient belongs to the selected recipe
