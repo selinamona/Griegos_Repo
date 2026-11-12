@@ -104,6 +104,6 @@ public class SatisfactionTimer : MonoBehaviour
     // Restart the current scene
     public void RetryGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(0);
     }
 }
