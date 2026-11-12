@@ -1,17 +1,16 @@
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ServingCounter : MonoBehaviour
 {
     public Transform servingPoint;
     public GameObject servedDishPrefab;
     public SatisfactionTimer satisfactionTimer;
-
     public GameObject retryButton;
 
     void Start()
     {
-        // Hide retry button until a dish is served
         if (retryButton != null)
         {
             retryButton.SetActive(false);
@@ -20,22 +19,18 @@ public class ServingCounter : MonoBehaviour
 
     public void ServeDish(string cookingResult, string dishName)
     {
-        Debug.Log("ServeDish was called!");
-
         if (servingPoint == null || servedDishPrefab == null)
         {
             Debug.LogError("Serving Point or Served Dish Prefab is missing!");
             return;
         }
 
-        // Spawn the served dish
         GameObject dish = Instantiate(
             servedDishPrefab,
             servingPoint.position,
             servingPoint.rotation
         );
 
-        // Play cooking result VFX
         ServedDishVFX vfx = dish.GetComponent<ServedDishVFX>();
 
         if (vfx != null)
@@ -43,14 +38,12 @@ public class ServingCounter : MonoBehaviour
             vfx.PlayEffect(cookingResult);
         }
 
-        // Apply Athena's preference and stop the timer
         if (satisfactionTimer != null)
         {
             satisfactionTimer.ApplyAthenaPreference(dishName);
             satisfactionTimer.StopTimer();
         }
 
-        // Show retry button
         if (retryButton != null)
         {
             retryButton.SetActive(true);
@@ -58,5 +51,11 @@ public class ServingCounter : MonoBehaviour
 
         Debug.Log("Dish served: " + dishName);
         Debug.Log("Cooking result: " + cookingResult);
+    }
+
+    // Restart the current scene
+    public void RetryGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
