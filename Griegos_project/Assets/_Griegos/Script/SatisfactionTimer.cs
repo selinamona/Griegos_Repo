@@ -1,11 +1,13 @@
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SatisfactionTimer : MonoBehaviour
 {
     public float maxTime = 120f;
     public float currentTime;
+    public GameObject retryButton;
 
     public Image satisfactionBar;
 
@@ -92,5 +94,16 @@ public class SatisfactionTimer : MonoBehaviour
     void TimerFinished()
     {
         Debug.Log("Satisfaction reached zero!");
+
+        if (retryButton != null)
+        {
+            retryButton.SetActive(true);
+        }
+    }
+
+    // Restart the current scene
+    public void RetryGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
