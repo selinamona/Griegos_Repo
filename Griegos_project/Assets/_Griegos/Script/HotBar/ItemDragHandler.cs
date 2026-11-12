@@ -13,6 +13,7 @@ public class ItemDragHandler : MonoBehaviour,
     // Finished dish information
     public bool isFinishedDish = false;
     public string cookingResult;
+    public string finishedDishName;
 
     void Awake()
     {
@@ -46,15 +47,24 @@ public class ItemDragHandler : MonoBehaviour,
 
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
+            Debug.Log("Dropped on: " + hit.collider.name);
+
             // SERVING COUNTER
             ServingCounter counter =
                 hit.collider.GetComponentInParent<ServingCounter>();
 
             if (counter != null && isFinishedDish)
             {
+                if (string.IsNullOrEmpty(finishedDishName))
+                {
+                    Debug.LogError("Finished dish name is missing!");
+                    ReturnToSlot(originalSlot);
+                    return;
+                }
+
                 originalSlot.currentItem = null;
 
-                counter.ServeDish(cookingResult);
+                counter.ServeDish(cookingResult, finishedDishName);
 
                 Destroy(gameObject);
                 return;

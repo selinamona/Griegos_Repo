@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28744c2970eb6c74c955c4dd58d36b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldItem
-  itemName: Salad dish
+  itemName: Salad
   inventoryPrefab: {fileID: 8922086789286910214, guid: c077aa96c9c08b249a4ae07c6e10f0d2, type: 3}
 --- !u!114 &-370148225751426520
 MonoBehaviour:
