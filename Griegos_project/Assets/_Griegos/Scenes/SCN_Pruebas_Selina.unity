@@ -5859,7 +5859,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ServingCounter
   servingPoint: {fileID: 248522661}
-  servedDishPrefab: {fileID: 8866168966944356901, guid: 5b8e0b87ddc867a44b823810062a478c, type: 3}
+  fishPrefab: {fileID: 0}
+  meatballsPrefab: {fileID: 0}
+  saladPrefab: {fileID: 0}
   satisfactionTimer: {fileID: 0}
   retryButton: {fileID: 0}
 --- !u!65 &248522660
@@ -19106,7 +19108,9 @@ MonoBehaviour:
   requiredIngredients: 3
   radialTimingUI: {fileID: 1414487236}
   pointer: {fileID: 0}
-  finishedDishPrefab: {fileID: 8866168966944356901, guid: 5b8e0b87ddc867a44b823810062a478c, type: 3}
+  fishPrefab: {fileID: 0}
+  meatballsPrefab: {fileID: 0}
+  saladPrefab: {fileID: 0}
   dishSpawnPoint: {fileID: 157454138}
 --- !u!65 &1084148228
 BoxCollider:
@@ -19887,6 +19891,7 @@ MonoBehaviour:
   satisfactionTimer: {fileID: 1092705781}
   selectedIngredients:
   - ChooseRecipe1
+  selectedDishName: 
 --- !u!4 &1222137255
 Transform:
   m_ObjectHideFlags: 0
@@ -52430,6 +52435,58 @@ PrefabInstance:
     - target: {fileID: 4382501471296781643, guid: 788e2913d9fb56848bfac625b5067f8f, type: 3}
       propertyPath: m_Name
       value: TabsMenuNewTry
+      objectReference: {fileID: 0}
+    - target: {fileID: 4382501471296781643, guid: 788e2913d9fb56848bfac625b5067f8f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924155988576837549, guid: 788e2913d9fb56848bfac625b5067f8f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924155988576837549, guid: 788e2913d9fb56848bfac625b5067f8f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924155988576837549, guid: 788e2913d9fb56848bfac625b5067f8f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924155988576837549, guid: 788e2913d9fb56848bfac625b5067f8f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924155988576837549, guid: 788e2913d9fb56848bfac625b5067f8f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924155988576837549, guid: 788e2913d9fb56848bfac625b5067f8f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7626250769772228498, guid: 788e2913d9fb56848bfac625b5067f8f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7626250769772228498, guid: 788e2913d9fb56848bfac625b5067f8f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7626250769772228498, guid: 788e2913d9fb56848bfac625b5067f8f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7626250769772228498, guid: 788e2913d9fb56848bfac625b5067f8f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7626250769772228498, guid: 788e2913d9fb56848bfac625b5067f8f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7626250769772228498, guid: 788e2913d9fb56848bfac625b5067f8f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
