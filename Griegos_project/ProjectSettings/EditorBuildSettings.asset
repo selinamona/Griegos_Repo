@@ -5,9 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Griegos/Scenes/SCN_Pruebas_Selina.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/_Griegos/Scenes/SCN_Start.unity
+    guid: 207e8657d36eb774bb819b1d8600e72e
+  - enabled: 1
+    path: Assets/_Griegos/Scenes/SCN_Game.unity
+    guid: ea921d826267d48428c8f89e07a7595a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
