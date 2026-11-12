@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93245e3ffc71842408cd85ded2ac6382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemDragHandler
-  worldItem: {fileID: 1368452415348912363, guid: 5b8e0b87ddc867a44b823810062a478c, type: 3}
+  worldItem: {fileID: -7713865490945827859, guid: d062eec0d8dda7742b82e06dc14b5574, type: 3}
   isFinishedDish: 0
   cookingResult: 
-  finishedDishName: 
+  finishedDishName: Salad

@@ -169,7 +169,9 @@ MonoBehaviour:
   requiredIngredients: 3
   radialTimingUI: {fileID: 24372203}
   pointer: {fileID: 2108103658}
-  finishedDishPrefab: {fileID: 8866168966944356901, guid: 5b8e0b87ddc867a44b823810062a478c, type: 3}
+  fishPrefab: {fileID: 9054446357664009495, guid: 439585b227f319b4ea89e4cffa182bb1, type: 3}
+  meatballsPrefab: {fileID: 5239234604147134982, guid: 166087b56a7af3b46b39b1849b50103d, type: 3}
+  saladPrefab: {fileID: 7913839690855201031, guid: d062eec0d8dda7742b82e06dc14b5574, type: 3}
   dishSpawnPoint: {fileID: 771442838}
 --- !u!65 &7772633
 BoxCollider:
@@ -2345,6 +2347,7 @@ MonoBehaviour:
   - Vegetables
   - Cheese
   - Oil
+  selectedDishName: 
 --- !u!4 &382773052
 Transform:
   m_ObjectHideFlags: 0
@@ -42373,7 +42376,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ServingCounter
   servingPoint: {fileID: 1653880571}
-  servedDishPrefab: {fileID: 8866168966944356901, guid: 5b8e0b87ddc867a44b823810062a478c, type: 3}
+  fishPrefab: {fileID: 9054446357664009495, guid: 439585b227f319b4ea89e4cffa182bb1, type: 3}
+  meatballsPrefab: {fileID: 5239234604147134982, guid: 166087b56a7af3b46b39b1849b50103d, type: 3}
+  saladPrefab: {fileID: 7913839690855201031, guid: d062eec0d8dda7742b82e06dc14b5574, type: 3}
   satisfactionTimer: {fileID: 1916384868}
   retryButton: {fileID: 880623724}
 --- !u!65 &1653880570
@@ -42405,13 +42410,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653880568}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.8767898, y: 1.69085, z: 6.55121}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1659646859
 GameObject:
   m_ObjectHideFlags: 0

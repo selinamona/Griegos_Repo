@@ -6,20 +6,24 @@ public class RecipeManager : MonoBehaviour
     public static RecipeManager instance;
     public SatisfactionTimer satisfactionTimer;
 
-    // Ingredients for the currently selected recipe
+    // Ingredients for the selected recipe
     public string[] selectedIngredients;
 
-    // Has the satisfaction timer already started?
+    // Name of the selected finished dish
+    public string selectedDishName;
+
+    // Prevents the satisfaction timer from restarting
     private bool timerStarted = false;
 
     void Awake()
     {
         instance = this;
         selectedIngredients = null;
+        selectedDishName = "";
         timerStarted = false;
     }
 
-    // Choose Recipe 1 - Fish
+    // Recipe 1 - Fish
     public void ChooseRecipe1()
     {
         SelectRecipe(new string[]
@@ -27,10 +31,10 @@ public class RecipeManager : MonoBehaviour
             "Fish",
             "Vegetables",
             "Potatos"
-        }, "Recipe 1");
+        }, "Fish");
     }
 
-    // Choose Recipe 2 - Meatballs
+    // Recipe 2 - Meatballs
     public void ChooseRecipe2()
     {
         SelectRecipe(new string[]
@@ -38,10 +42,10 @@ public class RecipeManager : MonoBehaviour
             "Vegetables",
             "Meat",
             "Sauce"
-        }, "Recipe 2");
+        }, "Meatballs");
     }
 
-    // Choose Recipe 3 - Salad
+    // Recipe 3 - Salad
     public void ChooseRecipe3()
     {
         SelectRecipe(new string[]
@@ -49,16 +53,15 @@ public class RecipeManager : MonoBehaviour
             "Cheese",
             "Vegetables",
             "Oil"
-        }, "Recipe 3");
+        }, "Salad");
     }
 
-    // Select or change the current recipe
-    void SelectRecipe(string[] ingredients, string recipeName)
+    // Select or change recipe
+    void SelectRecipe(string[] ingredients, string dishName)
     {
-        // Update the selected recipe
         selectedIngredients = ingredients;
+        selectedDishName = dishName;
 
-        // Close dialogue
         InkDialogueManager dialogue =
             FindObjectOfType<InkDialogueManager>();
 
@@ -67,9 +70,9 @@ public class RecipeManager : MonoBehaviour
             dialogue.CloseDialogue();
         }
 
-        Debug.Log(recipeName + " selected!");
+        Debug.Log(dishName + " selected!");
 
-        // Start satisfaction timer only once
+        // Start timer only once
         if (!timerStarted)
         {
             if (satisfactionTimer != null)
@@ -84,7 +87,7 @@ public class RecipeManager : MonoBehaviour
         }
     }
 
-    // Check if an ingredient belongs to the selected recipe
+    // Check if ingredient belongs to selected recipe
     public bool IsIngredientCorrect(string ingredientName)
     {
         if (selectedIngredients == null)

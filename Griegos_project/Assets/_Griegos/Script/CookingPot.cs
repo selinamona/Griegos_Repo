@@ -1,5 +1,4 @@
 
-
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,8 +9,11 @@ public class CookingPot : MonoBehaviour
     public GameObject radialTimingUI;
     public PointerController pointer;
 
-    [Header("Finished Dish")]
-    public GameObject finishedDishPrefab;
+    [Header("Finished Dishes")]
+    public GameObject fishPrefab;
+    public GameObject meatballsPrefab;
+    public GameObject saladPrefab;
+
     public Transform dishSpawnPoint;
 
     private List<WorldItem> ingredients = new List<WorldItem>();
@@ -58,7 +60,6 @@ public class CookingPot : MonoBehaviour
         pointer.StartQTE();
     }
 
-
     public void FinishCooking(string cookingResult)
     {
         if (cookingFinished) return;
@@ -66,25 +67,47 @@ public class CookingPot : MonoBehaviour
         cookingFinished = true;
         radialTimingUI.SetActive(false);
 
+        GameObject selectedPrefab = null;
+
+        string dishName = RecipeManager.instance.selectedDishName;
+
+        if (dishName == "Fish")
+        {
+            selectedPrefab = fishPrefab;
+        }
+        else if (dishName == "Meatballs")
+        {
+            selectedPrefab = meatballsPrefab;
+        }
+        else if (dishName == "Salad")
+        {
+            selectedPrefab = saladPrefab;
+        }
+
+        if (selectedPrefab == null)
+        {
+            Debug.LogError("Finished dish prefab is missing!");
+            return;
+        }
+
         Transform spawnPoint = dishSpawnPoint != null
             ? dishSpawnPoint
             : transform;
 
         GameObject dish = Instantiate(
-            finishedDishPrefab,
+            selectedPrefab,
             spawnPoint.position,
             spawnPoint.rotation
         );
 
-        FinishedDishPickup pickup = dish.GetComponent<FinishedDishPickup>();
+        FinishedDishPickup pickup =
+            dish.GetComponent<FinishedDishPickup>();
 
         if (pickup != null)
         {
             pickup.cookingResult = cookingResult;
         }
 
-        Debug.Log("Dish spawned with result: " + cookingResult);
+        Debug.Log(dishName + " spawned with result: " + cookingResult);
     }
-
 }
-
